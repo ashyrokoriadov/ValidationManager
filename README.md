@@ -13,7 +13,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Hints
 ### Validators namespace
 A namespace where a valdiator logic is defined. All classes are derived from Validator class. A "template" design pattern has been used.
-### Intefaces namespace
+### Interfaces namespace
 Several interfaces were defined, so objects implementing these interfaces could be validated by certain validators defined in Validators namespace.
 ### StaticClasses namespace
 The logic defined in Validators namespace were incapsulated as static classes. There are 3 static classes divided by data validation type.
