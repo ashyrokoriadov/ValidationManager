@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64CBE8FA-A999-4612-89AB-9B2551FFF69C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ValidationManager</RootNamespace>
+    <AssemblyName>ValidationManager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\DateFormatAttribute.cs" />
+    <Compile Include="Attributes\DateTimeAttribute.cs" />
+    <Compile Include="Attributes\EmailAttribute.cs" />
+    <Compile Include="Attributes\IntegerAttribute.cs" />
+    <Compile Include="Attributes\LengthAttribute.cs" />
+    <Compile Include="Attributes\MinLengthAttribute.cs" />
+    <Compile Include="Attributes\MobilePhoneAttribute.cs" />
+    <Compile Include="Attributes\NegativeNumberAttribute.cs" />
+    <Compile Include="Attributes\NumberAttribute.cs" />
+    <Compile Include="Attributes\PositiveNumberAttribute.cs" />
+    <Compile Include="Attributes\RangeAttribute.cs" />
+    <Compile Include="Attributes\RegexAttribute.cs" />
+    <Compile Include="Attributes\RequiredFieldAttribute.cs" />
+    <Compile Include="Attributes\ValidationAttributeBase.cs" />
+    <Compile Include="Attributes\WebPageAttribute.cs" />
+    <Compile Include="Attributes\ZipCodeAttribute.cs" />
+    <Compile Include="Interfaces\ILengthValidatable.cs" />
+    <Compile Include="Interfaces\IMinLengthValidatable.cs" />
+    <Compile Include="Interfaces\INumberValidatable.cs" />
+    <Compile Include="Interfaces\IRangeValidatable.cs" />
+    <Compile Include="ModelState\ModelState.cs" />
+    <Compile Include="ModelState\ModelStateBase.cs" />
+    <Compile Include="StaticClasses\ValidateData.cs" />
+    <Compile Include="StaticClasses\ValidateDataProperties.cs" />
+    <Compile Include="StaticClasses\ValidateRegex.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidationMessageManager.cs" />
+    <Compile Include="Validator.cs" />
+    <Compile Include="Validators\DateFormatValidator.cs" />
+    <Compile Include="Validators\DateValidator.cs" />
+    <Compile Include="Validators\EmailValidator.cs" />
+    <Compile Include="Validators\IntegerValidator.cs" />
+    <Compile Include="Validators\LengthValidator.cs" />
+    <Compile Include="Validators\MinLengthValidator.cs" />
+    <Compile Include="Validators\MobilePhoneValidator.cs" />
+    <Compile Include="Validators\NegativeNumberValidator.cs" />
+    <Compile Include="Validators\PositiveNumberValidator.cs" />
+    <Compile Include="Validators\RangeValidator.cs" />
+    <Compile Include="Validators\RegexValidator.cs" />
+    <Compile Include="Validators\RequiredFieldValidator.cs" />
+    <Compile Include="Validators\NumberValidator.cs" />
+    <Compile Include="Validators\WebPageNameValidator.cs" />
+    <Compile Include="Validators\ZipCodeValidator.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

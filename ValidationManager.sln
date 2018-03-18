@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationManager", "ValidationManager\ValidationManager.csproj", "{64CBE8FA-A999-4612-89AB-9B2551FFF69C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationTest", "ValidationTest\ValidationTest.csproj", "{8BC5CD3A-3CFA-49D7-AD9A-9C4D7E52FC5D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64CBE8FA-A999-4612-89AB-9B2551FFF69C} = {64CBE8FA-A999-4612-89AB-9B2551FFF69C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64CBE8FA-A999-4612-89AB-9B2551FFF69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CBE8FA-A999-4612-89AB-9B2551FFF69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CBE8FA-A999-4612-89AB-9B2551FFF69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CBE8FA-A999-4612-89AB-9B2551FFF69C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC5CD3A-3CFA-49D7-AD9A-9C4D7E52FC5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC5CD3A-3CFA-49D7-AD9A-9C4D7E52FC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC5CD3A-3CFA-49D7-AD9A-9C4D7E52FC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC5CD3A-3CFA-49D7-AD9A-9C4D7E52FC5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://andriyshyrokoryadov.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ValidationManager\\ValidationManager.csproj
+		SccProjectName1 = ValidationManager
+		SccLocalPath1 = ValidationManager
+		SccProjectUniqueName2 = ValidationTest\\ValidationTest.csproj
+		SccProjectName2 = ValidationTest
+		SccLocalPath2 = ValidationTest
+	EndGlobalSection
+EndGlobal

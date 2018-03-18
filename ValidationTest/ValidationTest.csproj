@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BC5CD3A-3CFA-49D7-AD9A-9C4D7E52FC5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ValidationTest</RootNamespace>
+    <AssemblyName>ValidationTest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="ValidationManager, Version=2.0.0.0, Culture=pl, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ValidationManager\bin\Debug\ValidationManager.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AttributeTest\DateFormatAttributeTest.cs" />
+    <Compile Include="AttributeTest\DateTimeAttributeTest.cs" />
+    <Compile Include="AttributeTest\AllAttributeTest.cs" />
+    <Compile Include="AttributeTest\PositiveNumberAttributeTest.cs" />
+    <Compile Include="AttributeTest\NumberAttributeTest.cs" />
+    <Compile Include="AttributeTest\IntegerAttributeTest.cs" />
+    <Compile Include="AttributeTest\NegativeNumberAttributeTest.cs" />
+    <Compile Include="AttributeTest\RequiredAttributeTest.cs" />
+    <Compile Include="AttributeTest\RangeAttributeTest.cs" />
+    <Compile Include="AttributeTest\MinLengthAttributeTest.cs" />
+    <Compile Include="AttributeTest\LengthAttributeTest.cs" />
+    <Compile Include="AttributeTest\ZipCodeNoPropertyTextTest.cs" />
+    <Compile Include="AttributeTest\ZipCodeAttributeTest.cs" />
+    <Compile Include="AttributeTest\WebPageAttributeTest.cs" />
+    <Compile Include="AttributeTest\MobilePhoneAttributeTest.cs" />
+    <Compile Include="AttributeTest\EmailAttributeTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\AttributeTestBase.cs" />
+    <Compile Include="Implementations\AttributeTestClass\DateFormatTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\DateTimeTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\PositiveNumberTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\NumberTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\IntegerTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\NegativeNumberTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\RequiredTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\RangeTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\MinLengthTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\LengthTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\AllAttrubutesTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\ZipCodeNoPropertyTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\ZipCodeTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\WebPageTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\MobileTest.cs" />
+    <Compile Include="Implementations\AttributeTestClass\EmailTest.cs" />
+    <Compile Include="Implementations\ILengthValidatableImp.cs" />
+    <Compile Include="Implementations\IMinLengthValidatableImp.cs" />
+    <Compile Include="Implementations\INumberValidatableImp.cs" />
+    <Compile Include="Implementations\IRangeValidatableImp.cs" />
+    <Compile Include="StaticValidatorsTest\DataPropertiesStaticIsWithinRangeTest.cs" />
+    <Compile Include="StaticValidatorsTest\DataPropertiesStaticIsExistsTest.cs" />
+    <Compile Include="StaticValidatorsTest\DataPropertiesStaticIsGreaterThanMinLengthTest.cs" />
+    <Compile Include="StaticValidatorsTest\DataStaticIntegerTest.cs" />
+    <Compile Include="StaticValidatorsTest\DataStaticNumberTest.cs" />
+    <Compile Include="StaticValidatorsTest\DataStaticPositiveNumberTest.cs" />
+    <Compile Include="StaticValidatorsTest\DataStaticNegativeNumberTest.cs" />
+    <Compile Include="StaticValidatorsTest\DataStaticDateTimeTest.cs" />
+    <Compile Include="StaticValidatorsTest\RegexStaticIsValidDateFormatTest.cs" />
+    <Compile Include="StaticValidatorsTest\RegexStaticIsMobilePhoneTest.cs" />
+    <Compile Include="StaticValidatorsTest\RegexStaticIsWebPageTest.cs" />
+    <Compile Include="StaticValidatorsTest\RegexStaticIsZipCodeTest.cs" />
+    <Compile Include="StaticValidatorsTest\DataPropertiesStaticIsWithinLengthTest.cs" />
+    <Compile Include="ValidatorsTest\DateFormatTest.cs" />
+    <Compile Include="ValidatorsTest\MinLengthValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\NegativeNumberValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\IntegerValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\RequiredValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\LengthValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\RangeValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\PositiveNumberValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\EmailValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\MobilePhoneValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\DateValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\NumberValidatorTest.cs" />
+    <Compile Include="StaticValidatorsTest\RegexStaticIsEmailTest.cs" />
+    <Compile Include="ValidatorsTest\WebPageNameValidatorTest.cs" />
+    <Compile Include="ValidatorsTest\ZipCodeValidatorTest.cs" />
+    <Compile Include="ValidationTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
